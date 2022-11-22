@@ -1,0 +1,26 @@
+* {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono",monospace;
+  &::selection{
+    background-color: brown;
+    color: white;
+  }
+}
+
+:root{
+  --width-sidebar : 60px
+}
+
+body{
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
