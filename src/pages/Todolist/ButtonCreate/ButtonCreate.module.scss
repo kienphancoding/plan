@@ -1,0 +1,29 @@
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: white;
+  border: 3px solid brown;
+  color: brown;
+  margin-left: 10px;
+  &:hover {
+    background-color: brown;
+    color: white;
+  }
+}
+
+@media (max-width: 770px) {
+  .btn {
+    font-size: 25px;
+    border: 2px solid brown;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 10px;
+    font-size: 20px;
+    border: 2px solid brown;
+  }
+}

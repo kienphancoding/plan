@@ -1,5 +1,28 @@
-.wrapper{
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 50px 100px;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 770px) {
+  .wrapper {
+    padding: 30px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 20px 10px;
+  }
+}
+
+.read {
+  width: 100%;
+}
+.create {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,75 @@
+.list {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 5px 0;
+  border-bottom: 1px solid brown;
+}
+
+.menu {
+  display: flex;
+  margin-left: 10px;
+}
+
+.btn {
+  margin-left: 5px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  cursor: pointer;
+  &:focus {
+    box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  }
+  &:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+      rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  &:active {
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+}
+
+.text {
+  font-size: 35px;
+  font-weight: 600;
+  color: brown;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon {
+  padding: 5px;
+  font-size: 35px;
+  color: brown;
+}
+
+@media (max-width: 770px) {
+  .text {
+    font-size: 25px;
+  }
+  .icon {
+    padding: 5px;
+    font-size: 25px;
+    color: brown;
+  }
+}
+
+@media (max-width: 480px) {
+  .text {
+    font-size: 20px;
+  }
+  .icon {
+    padding: 5px;
+    font-size: 20px;
+    color: brown;
+  }
+}

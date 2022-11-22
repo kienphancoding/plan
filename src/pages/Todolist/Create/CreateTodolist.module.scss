@@ -1,0 +1,25 @@
+.input {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: white;
+  color: brown;
+  border: 3px solid brown;
+  width: 100%;
+}
+
+@media (max-width: 770px) {
+  .input {
+    font-size: 25px;
+    border: 2px solid brown;
+  }
+}
+
+@media (max-width: 480px) {
+  .input {
+    padding: 10px 10px;
+    font-size: 20px;
+    border: 2px solid brown;
+  }
+}
