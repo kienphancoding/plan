@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import { memo } from "react";
 import style from "./ReadTodolist.module.scss";
-import { useEffect } from "react";
 
 const ReadTodolist = ({ createList, setCreateList }) => {
   const handleDelete = (index) => {
@@ -14,10 +13,6 @@ const ReadTodolist = ({ createList, setCreateList }) => {
     setCreateList(new_arr);
     localStorage.setItem("todolist", JSON.stringify(new_arr));
   };
-
-  useEffect(() => {
-    document.getElementsByClassName(clsx(style.item))[createList.length-1].scrollIntoView()
-  }, [createList]);
   
   return (
     <div className={clsx(style.list)}>

@@ -1,0 +1,204 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 50px 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .list {
+    height: calc(100vh - 250px);
+    overflow: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: brown;
+      border-radius: 100px;
+    }
+  }
+  .menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  .durationBar {
+    height: 20px;
+    padding: 10px 5px;
+    background-color: white;
+    border: 3px solid brown;
+    border-radius: 100px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .duration {
+      height: 14px;
+      border-radius: 10px;
+      background-color: brown;
+    }
+  }
+  button {
+    --radius: 60px;
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: 100px;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px,
+      4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    background-color: white;
+    color: brown;
+    border: 3px solid brown;
+    cursor: pointer;
+    &:active {
+      box-shadow: 0px 0px 0px 0px;
+      top: 5px;
+      left: 5px;
+    }
+    .icon {
+      font-size: 20px;
+    }
+  }
+  .activeLoop {
+    background-color: white;
+    border: 3px solid white;
+    color: brown;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: brown 0 2px 4px, brown 0 7px 13px -3px,
+      brown 0 -3px 0 inset;
+    border-radius: 4px;
+    position: relative;
+    transition: box-shadow 0.15s, transform 0.15s;
+    touch-action: manipulation;
+    will-change: box-shadow, transform;
+    padding:20px 50px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 7px 0;
+    color: brown;
+    &:focus {
+      box-shadow: brown 0 0 0 1.5px inset,
+        rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        brown 0 -3px 0 inset;
+    }
+    &:hover {
+      box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, brown 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: brown 0 3px 7px inset;
+      transform: translateY(2px);
+    }
+    h1 {
+      overflow: hidden;
+      font-size: 28px;
+      max-height: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    p {
+      overflow: hidden;
+
+      max-height: 24px;
+      font-size: 24px;
+      font-size: 600;
+    }
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    --radius: 70px;
+    width: var(--radius);
+    height: var(--radius);
+    min-width: var(--radius);
+  }
+  .activeItem{
+    background-color: brown;
+    color: white;
+    box-shadow: white 0 2px 4px, white 0 7px 13px -3px,
+      white 0 -3px 0 inset;
+    &:focus {
+        box-shadow: white 0 0 0 1.5px inset,
+          rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+          white 0 -3px 0 inset;
+      }
+      &:hover {
+        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+          rgba(45, 35, 66, 0.3) 0 7px 13px -3px, white 0 -3px 0 inset;
+        transform: translateY(-2px);
+      }
+      &:active {
+        box-shadow: white 0 3px 7px inset;
+        transform: translateY(2px);
+      }
+}
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 770px) {
+  .wrapper {
+    .item {
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 19px;
+      }
+    }
+
+    .list {
+      height: calc(100vh - 290px);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    height: calc(100vh - 290px);
+  }
+  .wrapper {
+    .item {
+      h1 {
+        font-size: 18px;
+        max-height: 40px;
+      }
+      p {
+        font-size: 13px;
+        max-height: 30px;
+      }
+    }
+  }
+}
+
+.select{
+    display: flex;
+    .itemSelect{
+        font-size: 30px;
+        font-weight: 600;
+        background-color: white;
+        color: brown;
+        border: 3px solid brown;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 10px;
+    }
+    .itemSelectActive{
+        background-color: brown;
+        color: white;
+    }
+}
