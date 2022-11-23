@@ -20,14 +20,10 @@ const Music = () => {
   const types = ["Japan", "China", "Lofi"];
   const [indexTypes, setIndexTypes] = useState(types[0]);
 
-  const filterSongs = songs.filter((x)=>{
-    return x.type === indexTypes
-  })
+  const filterSongs = songs.filter((x) => {
+    return x.type === indexTypes;
+  });
   const [dataBackground, setDataBackground] = useState(filterSongs[0].img);
-
- 
-
-  
 
   const handlePlay = () => {
     setPlay(false);
@@ -63,13 +59,17 @@ const Music = () => {
   const noRef = useRef(1);
   const RefWidth = useRef();
 
-  //fixed bug chuyen type 
+  //fixed bug chuyen type
   useEffect(() => {
     //set lai bai dau
-    setIndexSong(()=>0)
+    setIndexSong(() => 0);
 
     //set lai image
-    setDataBackground(indexSong>filterSongs.length-1 ? filterSongs[0].img : filterSongs[indexSong].img)
+    setDataBackground(
+      indexSong > filterSongs.length - 1
+        ? filterSongs[0].img
+        : filterSongs[indexSong].img
+    );
   }, [indexTypes]);
 
   //   scroll into view
@@ -144,11 +144,17 @@ const Music = () => {
     } else {
       noRef.current.pause();
     }
-  }, [play, indexSong, loopSong,indexTypes]);
+  }, [play, indexSong, loopSong, indexTypes]);
 
   return (
     <div
-      style={{ backgroundImage: `url(${indexSong>filterSongs.length-1 ?filterSongs[0].img:dataBackground})` }}
+      style={{
+        backgroundImage: `url(${
+          indexSong > filterSongs.length - 1
+            ? filterSongs[0].img
+            : dataBackground
+        })`,
+      }}
       className={cx(style.wrapper)}
     >
       <div className={clsx(style.select)}>
@@ -188,9 +194,14 @@ const Music = () => {
         })}
       </div>
 
-      <audio ref={noRef} src={indexSong > filterSongs.length - 1
+      <audio
+        ref={noRef}
+        src={
+          indexSong > filterSongs.length - 1
             ? filterSongs[0].src
-            : filterSongs[indexSong].src} />
+            : filterSongs[indexSong].src
+        }
+      />
       <div
         className={cx(style.durationBar)}
         ref={RefWidth}

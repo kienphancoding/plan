@@ -19,7 +19,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    
   }
   .durationBar {
     height: 20px;
@@ -68,22 +67,20 @@
     display: flex;
     flex-direction: row;
     background-color: white;
-    box-shadow: brown 0 2px 4px, brown 0 7px 13px -3px,
-      brown 0 -3px 0 inset;
+    box-shadow: brown 0 2px 4px, brown 0 7px 13px -3px, brown 0 -3px 0 inset;
     border-radius: 4px;
     position: relative;
     transition: box-shadow 0.15s, transform 0.15s;
     touch-action: manipulation;
     will-change: box-shadow, transform;
-    padding:20px 50px;
+    padding: 20px 50px;
     font-size: 30px;
     font-weight: 600;
     margin: 7px 0;
     color: brown;
     &:focus {
-      box-shadow: brown 0 0 0 1.5px inset,
-        rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-        brown 0 -3px 0 inset;
+      box-shadow: brown 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, brown 0 -3px 0 inset;
     }
     &:hover {
       box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
@@ -119,28 +116,25 @@
     height: var(--radius);
     min-width: var(--radius);
   }
-  .activeItem{
+  .activeItem {
     background-color: brown;
     color: white;
-    box-shadow: white 0 2px 4px, white 0 7px 13px -3px,
-      white 0 -3px 0 inset;
+    box-shadow: white 0 2px 4px, white 0 7px 13px -3px, white 0 -3px 0 inset;
     &:focus {
-        box-shadow: white 0 0 0 1.5px inset,
-          rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-          white 0 -3px 0 inset;
-      }
-      &:hover {
-        box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
-          rgba(45, 35, 66, 0.3) 0 7px 13px -3px, white 0 -3px 0 inset;
-        transform: translateY(-2px);
-      }
-      &:active {
-        box-shadow: white 0 3px 7px inset;
-        transform: translateY(2px);
-      }
+      box-shadow: white 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, white 0 -3px 0 inset;
+    }
+    &:hover {
+      box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px, white 0 -3px 0 inset;
+      transform: translateY(-2px);
+    }
+    &:active {
+      box-shadow: white 0 3px 7px inset;
+      transform: translateY(2px);
+    }
+  }
 }
-}
-
 
 @keyframes spin {
   0% {
@@ -185,20 +179,20 @@
   }
 }
 
-.select{
-    display: flex;
-    .itemSelect{
-        font-size: 30px;
-        font-weight: 600;
-        background-color: white;
-        color: brown;
-        border: 3px solid brown;
-        padding: 10px 20px;
-        margin: 0 10px;
-        border-radius: 10px;
-    }
-    .itemSelectActive{
-        background-color: brown;
-        color: white;
-    }
+.select {
+  display: flex;
+  .itemSelect {
+    font-size: 30px;
+    font-weight: 600;
+    background-color: white;
+    color: brown;
+    border: 3px solid brown;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+  }
+  .itemSelectActive {
+    background-color: brown;
+    color: white;
+  }
 }
