@@ -9,10 +9,29 @@ import {
 } from "recharts";
 
 const Statics = () => {
-  const data = JSON.parse(localStorage.getItem("time")) ?? []
+  const data = JSON.parse(localStorage.getItem("time")) ?? [];
   return (
-    <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",margin:"50px 0"}}>
-        <h1 style={{color:"brown",backgroundColor:"white",fontSize:"40px",marginBottom:"50px",border:"3px solid brown",padding:"20px"}}>Thời gian học tập làm việc của bạn</h1>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        margin: "50px 0",
+      }}
+    >
+      <h1
+        style={{
+          color: "brown",
+          backgroundColor: "white",
+          fontSize: "40px",
+          marginBottom: "50px",
+          border: "3px solid brown",
+          padding: "20px",
+        }}
+      >
+        Thời gian học tập làm việc của bạn
+      </h1>
       <ResponsiveContainer width={1000} height={600}>
         <AreaChart
           width={500}
